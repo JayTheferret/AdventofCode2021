@@ -24,7 +24,6 @@ public class Methods {
         }
         return arr;
 
-
         /*Scanner scanner = new Scanner(new File(Path));
         List<Integer> list = new ArrayList<Integer>();
         while(scanner.hasNextInt()){
@@ -41,5 +40,19 @@ public class Methods {
         }/*
 
         return arr;*/
+    }
+
+    static String[] readInputIntoStringList(String pathName) throws IOException {
+
+        Path fileName = Path.of(pathName);
+        String input_as_string = Files.readString(fileName);
+
+        String[] string = input_as_string
+                .replaceAll("\"","")
+                .replaceAll("\r","")
+                .replaceAll(" ","")
+                .split("\n");
+
+        return string;
     }
 }
