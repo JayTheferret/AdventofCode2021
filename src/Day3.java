@@ -44,7 +44,8 @@ public class Day3 {
     public static int Part2() throws IOException {
 
         String[] string = Methods.readInputIntoStringList("./input_Files/Day3.txt");
-        //var temp = new ArrayList<String>();
+
+
 
         int[] arr0 = new int[12];
         int[] arr1 = new int[12];
@@ -93,9 +94,14 @@ public class Day3 {
                 string = temp;
                 counter = 0;
             }
+            if(string.length == 1){
+                oxygr = string[0];
+                break;
+            }
         }
 
         //CO2
+
         string = Methods.readInputIntoStringList("./input_Files/Day3.txt");
         arr0 = new int[12];
         arr1 = new int[12];
@@ -137,6 +143,10 @@ public class Day3 {
                 string = temp;
                 counter = 0;
             }
+            if(string.length == 1){
+                CO2r = string[0];
+                break;
+            }
         }
         //---------------------
 
@@ -146,79 +156,9 @@ public class Day3 {
         int oxyDez = Integer.parseInt(oxygr, 2);
         int CO2Dez = Integer.parseInt(CO2r, 2);
 
-        System.out.println("Gamma:   " + oxygr + " = " + oxyDez);
-        System.out.println("Epsilon: " + CO2r + " = " + CO2Dez);
+        System.out.println("Oxygen:   " + oxygr + " = " + oxyDez);
+        System.out.println("CO2: " + CO2r + " = " + CO2Dez);
 
         return oxyDez * CO2Dez;
-
-
-       /* for(int i = 0; i < 12; i++) {
-
-            for (String s : string) {
-                if(s.charAt(i) =='1'){
-                    arr1[i] ++;
-                }
-                else if(s.charAt(i) == '0'){
-                    arr0[i] ++;
-                }
-            }
-
-            if(arr0[i] > arr1[i]){
-                //zahl i ist 0
-                //alle mit i = 0 in neue liste?
-                oxygr += "0";
-                CO2r += "1";
-
-                String[] temp = new String[arr0[i]];
-
-                for(String s : string){
-                    if(s.charAt(i)=='0'){
-                       temp[counter] = s;
-                       counter++;
-                    }
-                }
-                string = temp;
-                counter = 0;
-            }
-            else if (arr0[i] <= arr1[i]){
-                oxygr += "1";
-                CO2r += "0";
-
-                String[] temp = new String[arr1[i]];
-
-                for(String s : string){
-                    if(s.charAt(i)=='1'){
-                        temp[counter] = s;
-                        counter++;
-                    }
-                }
-                string = temp;
-                counter = 0;
-            }
-            /*else if (arr0[i] == arr1[i]){
-                oxygr += "1";
-                CO2r += "0";
-            }
-        }
-
-
-        System.out.println(oxygr);
-        System.out.println(CO2r);
-
-        int oxyDez = Integer.parseInt(oxygr,2);
-        int CO2Dez = Integer.parseInt(CO2r,2);
-
-        System.out.println("Gamma:   " + oxygr + " = " + oxyDez);
-        System.out.println("Epsilon: " + CO2r + " = " + CO2Dez);
-
-        return oxyDez*CO2Dez;
-        */
-
-        // 100111010001
-        // 011000101110
-        //3895150 F
-        //3975566 F /too high
-        //3944750 F /too high
-        //590440 F
     }
 }
