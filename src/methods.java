@@ -2,11 +2,11 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class methods {
+public class Methods {
 
-    static int[] readInputintoArray(String Path_Name) throws IOException {
+    static int[] readInputintoArray(String pathName) throws IOException {
 
-        Path fileName = Path.of(Path_Name);
+        Path fileName = Path.of(pathName);
         String input_as_string = Files.readString(fileName);
 
         String[] string = input_as_string
@@ -41,33 +41,5 @@ public class methods {
         }/*
 
         return arr;*/
-    }
-
-    public static int day1() throws IOException {
-
-        System.out.println("Day1: ");
-
-        int incr_counter = 0;
-
-        int[] arr = readInputintoArray("./input_Files/Day1.txt");
-
-        for(int i = 1; i < arr.length; i++){
-            if(arr[i] >= arr[i-1] ){
-                incr_counter++;
-            }
-        }
-        return incr_counter;
-
-       /*
-        System.out.println("Day1");
-        var arr = readInputintoArray("./input_Files/Day1.txt");
-        int incr_counter = 0;
-
-        for(int i = 0; i <= readInputintoArray("./input_Files/Day1.txt").length-1; i++){
-            System.out.println(arr[i]);
-           // if(arr[i] <= arr[i+1]){}
-        }
-
-        return 1;*/
     }
 }
