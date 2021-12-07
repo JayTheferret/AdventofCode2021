@@ -54,11 +54,26 @@
       <option name="presentableId" value="Default" />
       <updated>1638821721581</updated>
       <workItem from="1638821722967" duration="9849000" />
-      <workItem from="1638876187998" duration="9366000" />
+      <workItem from="1638876187998" duration="17773000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="19" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="string" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
