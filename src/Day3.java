@@ -44,9 +44,7 @@ public class Day3 {
     public static int Part2() throws IOException {
 
         String[] string = Methods.readInputIntoStringList("./input_Files/Day3.txt");
-
-
-
+        
         int[] arr0 = new int[12];
         int[] arr1 = new int[12];
 
